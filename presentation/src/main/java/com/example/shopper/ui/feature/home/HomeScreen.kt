@@ -32,11 +32,10 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = koinView
         }
 
         is HomeScreenUIEvents.Success -> {
-            val data = (uiState.value as HomeScreenUIEvents.Success).data
+            val data = (uiState.value as HomeScreenUIEvents.Success)
             LazyColumn {
+                item {
 
-                items(data) { product ->
-                    ProductItem(product = product)
                 }
             }
         }
